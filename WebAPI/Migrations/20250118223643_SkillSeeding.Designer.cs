@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebAPI.Data;
 
@@ -11,9 +12,11 @@ using WebAPI.Data;
 namespace WebAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250118223643_SkillSeeding")]
+    partial class SkillSeeding
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,13 +50,7 @@ namespace WebAPI.Migrations
                     b.Property<int>("Class")
                         .HasColumnType("int");
 
-                    b.Property<int>("Defeats")
-                        .HasColumnType("int");
-
                     b.Property<int>("Defense")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Fights")
                         .HasColumnType("int");
 
                     b.Property<int>("HitPoints")
@@ -71,9 +68,6 @@ namespace WebAPI.Migrations
 
                     b.Property<Guid?>("UserId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Victories")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -103,19 +97,19 @@ namespace WebAPI.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("892a4e8f-f006-4553-a5d2-cec1bddccae8"),
+                            Id = new Guid("d60cbb2b-5794-4917-99fb-270e82354562"),
                             Damage = 30,
                             Name = "Fireball"
                         },
                         new
                         {
-                            Id = new Guid("0b00ab8a-8d78-4087-b3f8-eff2bafce08e"),
+                            Id = new Guid("0eecdf70-2df9-4af6-950a-47a2d9d3c053"),
                             Damage = 10,
                             Name = "Frenzy"
                         },
                         new
                         {
-                            Id = new Guid("195ec359-0cf7-4a6b-9f66-aaccb40a8bcf"),
+                            Id = new Guid("e8cfa961-505f-492a-a138-2ae61a233c83"),
                             Damage = 20,
                             Name = "Blizzard"
                         });

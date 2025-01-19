@@ -8,5 +8,6 @@ namespace WebAPI.Services.CharacterService
         Task<ServiceResponse<List<GetCharacterResponseDto>>> AddCharacter(AddCharacterRequestDto newCharacter);
         Task<ServiceResponse<GetCharacterResponseDto>> UpdateCharacter(UpdateCharacterRequestDto updateCharacter);
         Task<ServiceResponse<List<GetCharacterResponseDto>>> DeleteCharacter(Guid id);
+        Task<ServiceResponse<GetCharacterResponseDto>> AddCharacterSkill(AddCharacterSkillDto newCharacterSkill);
     }
 }
